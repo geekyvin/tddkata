@@ -1,4 +1,4 @@
-package com.tradecompliance.kata;
+package com.tradecompliance.kata.ex1;
 
 public class Exercise1 {
 
