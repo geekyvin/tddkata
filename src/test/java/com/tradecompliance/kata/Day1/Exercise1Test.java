@@ -1,4 +1,4 @@
-package com.tradecompliance.kata.ex1;
+package com.tradecompliance.kata.Day1;
 
 import java.io.Console;
 
