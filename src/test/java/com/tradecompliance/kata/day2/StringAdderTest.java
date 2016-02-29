@@ -1,4 +1,4 @@
-package com.tradecompliance.kata.ex2;
+package com.tradecompliance.kata.day2;
 
 import org.junit.Before;
 import org.junit.Test;

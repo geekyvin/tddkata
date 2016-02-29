@@ -1,4 +1,4 @@
-package com.tradecompliance.kata.ex3;
+package com.tradecompliance.kata.day3;
 
 import java.util.Arrays;
 import java.util.List;
