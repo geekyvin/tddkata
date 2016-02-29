@@ -1,6 +1,5 @@
 package com.tradecompliance.kata.day5;
 
-import com.tradecompliance.kata.day4.StringAdder;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -8,7 +7,7 @@ import static org.junit.Assert.assertEquals;
 
 public class StringAdderTest {
 
-    private com.tradecompliance.kata.day4.StringAdder stringAdder;
+    private StringAdder stringAdder;
 
     @Before
     public void init() {
@@ -35,7 +34,7 @@ public class StringAdderTest {
     public void InputIsOneAndTwo_ChangedDelimitter_ReturnThree() {
         String input = "//;\n1;2";
         int expected = 3;
-        int actual = stringAdder.add(input);
+         int actual = stringAdder.add(input);
         assertEquals(expected, actual);
     }
 

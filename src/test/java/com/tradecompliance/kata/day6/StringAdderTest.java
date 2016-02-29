@@ -1,5 +1,4 @@
 package com.tradecompliance.kata.day6;
-import com.tradecompliance.kata.day5.StringAdder;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -7,7 +6,7 @@ import static org.junit.Assert.assertEquals;
 
 public class StringAdderTest {
 
-    private com.tradecompliance.kata.day5.StringAdder stringAdder;
+    private StringAdder stringAdder;
 
     @Before
     public void init() {
