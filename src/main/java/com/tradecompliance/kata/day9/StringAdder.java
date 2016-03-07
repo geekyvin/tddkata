@@ -1,4 +1,4 @@
-package com.tradecompliance.kata.day6;
+package com.tradecompliance.kata.day9;
 
 import java.util.Arrays;
 import java.util.regex.Matcher;
@@ -7,16 +7,7 @@ import java.util.regex.Pattern;
 public class StringAdder {
 
     public int add(String numbers) {
-
-        String delimmiter = "[,]|[\n]";
-        //Any char following '//'
-        Matcher delimmiterMatcher = Pattern.compile("^(//)(.)").matcher(numbers);
-        if(delimmiterMatcher.find()) {
-            delimmiter = "["+delimmiterMatcher.group(0)+"|\n]";
-        }
-
-        numbers = numbers.replaceAll(delimmiterMatcher.group(0), "")
-                .replaceFirst(delimmiterMatcher.group(1), "");
+        String delimmiter = getDelimmter(numbers);
         return Arrays.asList(numbers.split(delimmiter))
                 .stream().map((s) -> mapToInt(s)).reduce(0, (a,b) -> a+b);
     }
@@ -36,4 +27,18 @@ public class StringAdder {
             return Integer.parseInt(a)+sum;
         }
     }
+
+
+    private String getDelimmter(String numbers) {
+        String delimitter = "[,]|[\n]";
+        String delimmiterPattern = "(//)(.)";
+        Matcher delimmiterMatcher = Pattern.compile(delimmiterPattern).matcher(numbers);
+        if(delimmiterMatcher.find()) {
+            delimitter = delimmiterMatcher.group(1);
+        }
+        return delimitter;
+    }
+
+
+
 }

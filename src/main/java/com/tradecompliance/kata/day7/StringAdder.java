@@ -1,4 +1,4 @@
-package com.tradecompliance.kata.day6;
+package com.tradecompliance.kata.day7;
 
 import java.util.Arrays;
 import java.util.regex.Matcher;
@@ -7,14 +7,12 @@ import java.util.regex.Pattern;
 public class StringAdder {
 
     public int add(String numbers) {
-
         String delimmiter = "[,]|[\n]";
         //Any char following '//'
-        Matcher delimmiterMatcher = Pattern.compile("^(//)(.)").matcher(numbers);
-        if(delimmiterMatcher.find()) {
-            delimmiter = "["+delimmiterMatcher.group(0)+"|\n]";
+        Matcher delimmiterMatcher = Pattern.compile("\\A(//.)").matcher(numbers);
+        if(delimmiterMatcher.matches()) {
+            delimmiter = delimmiterMatcher.group();
         }
-
         numbers = numbers.replaceAll(delimmiterMatcher.group(0), "")
                 .replaceFirst(delimmiterMatcher.group(1), "");
         return Arrays.asList(numbers.split(delimmiter))
