@@ -5,6 +5,14 @@ import java.util.List;
 
 public class BowlingScoreCalculator {
 
+    /**
+     *      X = Strike
+     *      / = Spare
+     *      - = No pins knocked down
+     *      F = Foul
+     *      Circled Number = a split with that number of pins knocked down.
+     **/
+
     public int calculateScore(LinkedList<Frame> frames) {
 
         int score = 0;
