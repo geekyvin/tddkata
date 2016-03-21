@@ -26,7 +26,7 @@ public class BowlingScoreCalculatorTest {
         nextFrame.setTryTwo(6);
         givenFrame.setNextFrame(nextFrame);
         int expectedBonus = 10;
-        int actual = classUnderTest.calcualteBonus(givenFrame);
+        int actual = classUnderTest.calculateBonus(givenFrame);
         assertEquals(expectedBonus, actual);
     }
 
@@ -40,7 +40,7 @@ public class BowlingScoreCalculatorTest {
         nextFrame.setTryTwo(6);
         givenFrame.setNextFrame(nextFrame);
         int expectedBonus = 4;
-        int actual = classUnderTest.calcualteBonus(givenFrame);
+        int actual = classUnderTest.calculateBonus(givenFrame);
         assertEquals(expectedBonus, actual);
     }
 

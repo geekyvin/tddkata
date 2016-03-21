@@ -14,13 +14,13 @@ public class BowlingScoreCalculator {
             } else if(i == 9) {
                 frames.get(i).setLast(true);
             }
-            score += calcualteBonus(frames.get(i));
+            score += calculateBonus(frames.get(i));
         }
 
         return score;
     }
 
-    public int calcualteBonus(Frame currentFrame) {
+    public int calculateBonus(Frame currentFrame) {
 
         int bonus = 0;
         if(!currentFrame.isLast() && currentFrame.getState().equals(State.STRIKE)) {
