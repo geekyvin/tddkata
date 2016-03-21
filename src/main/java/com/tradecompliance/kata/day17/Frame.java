@@ -43,6 +43,10 @@ public class Frame {
         if(tryOne+tryTwo == 10) {
             state = State.SPARE;
         }
+
+        if(tryOne == 0 && tryTwo == 0) {
+            state = State.NOPINS;
+        }
     }
 
     public Frame getNextFrame() {
